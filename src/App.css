@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.parallax {
+  background-image: url('your-image-url');
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
