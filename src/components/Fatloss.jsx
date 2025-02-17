@@ -12,7 +12,8 @@ function Fatloss() {
   const sendData = async (data) => {
     try {
       let response = await fetch(
-        "https://mern-fitness-app-production-e9fe.up.railway.app/mode",
+        // "https://mern-fitness-app-production-e9fe.up.railway.app/mode",
+        "http://localhost:3000/mode",
         {
           method: "POST",
           headers: {
@@ -24,8 +25,7 @@ function Fatloss() {
       );
 
       if (response.ok) {
-        alert("Data sent to DB");
-        navigate("/activity");
+        navigate("/select");
       }
     } catch (err) {
       alert("A problem occured");

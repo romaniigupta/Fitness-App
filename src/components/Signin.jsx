@@ -18,7 +18,8 @@ function Signin() {
   const onSubmit = async (data) => {
     try {
       const response = await fetch(
-        "https://mern-fitness-app-production-e9fe.up.railway.app/signin",
+        // "https://mern-fitness-app-production-e9fe.up.railway.app/signin",
+        "http://localhost:3000/signin",
         {
           method: "POST",
           headers: {
@@ -42,7 +43,7 @@ function Signin() {
         localStorage.setItem("token", responseData.data.token);
         localStorage.setItem("refreshtoken", responseData.data.refresh);
         console.log(`${localStorage.getItem("refreshtoken")}`);
-        navigate("/dashboard");
+        navigate("/activity");
       } else {
         const errorData = await response.json();
         setError("email", {

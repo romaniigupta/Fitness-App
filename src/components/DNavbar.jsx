@@ -38,6 +38,12 @@ function DNavbar() {
           {/* <li className="hover:cursor-pointer hover:text-yellow-400">Home</li> */}
           <li
             className="hover:cursor-pointer hover:text-yellow-400"
+            onClick={() => navigate("/activity")}
+          >
+            Home
+          </li>
+          <li
+            className="hover:cursor-pointer hover:text-yellow-400"
             onClick={() => {
               setvisible2(true);
               setTimeout(() => {
@@ -62,15 +68,15 @@ function DNavbar() {
           </li>
           <li
             className="hover:cursor-pointer hover:text-yellow-400"
-            onClick={() => {
-              setvisible2(true);
-              setTimeout(() => {
-                document.querySelector("#text").innerHTML =
-                  "<p class='font-normal text-base text-center'>This app has all the essential micro and macronutients data available for you to track your fitness needs. Whether you want to gain or loss the weight this app will guide you throughout achieving your fitnessgoals</p>";
-              }, 0);
-            }}
+            onClick={() => navigate("/leaderboard")}
           >
-            Guide
+            Leaderboard
+          </li>
+          <li
+            className="hover:cursor-pointer hover:text-yellow-400"
+            onClick={() => navigate("/profile")}
+          >
+            Profile
           </li>
           <div
             className=" h-1 bg-purple-950 p-6 m-3 rounded-full flex justify-center items-center cursor-pointer hover:bg-purple-900"

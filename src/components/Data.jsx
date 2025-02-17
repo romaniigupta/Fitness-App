@@ -19,7 +19,8 @@ function Data() {
   const onSubmit = async (data) => {
     try {
       let response = await fetch(
-        "https://mern-fitness-app-production-e9fe.up.railway.app/data",
+        // "https://mern-fitness-app-production-e9fe.up.railway.app/data",
+        "http://localhost:3000/data",
         {
           method: "POST",
           headers: {
@@ -32,7 +33,7 @@ function Data() {
       console.log("COnnected");
       if (response.ok) {
         alert("Your data submitted");
-        navigate("/goals");
+        navigate("/activity");
       } else if (response.status === 403) {
       } else {
         throw new Error("Failed to submit data");

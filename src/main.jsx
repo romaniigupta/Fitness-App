@@ -13,13 +13,18 @@ import Activity from "./components/Activity.jsx";
 import Dashboard from "./components/Dashboard.jsx";
 import Protectedroute from "./components/Protectedroute.jsx";
 import { Navigate } from "react-router-dom";
+import SelectExercise from "./components/SelectExercise.jsx";
+import Leaderboard from "./components/Leaderboard.jsx";
+import Select from "./components/Select.jsx";
+import Challenges from "./components/Challenges.jsx";
+import Profile from "./components/Profile.jsx";
 const token = localStorage.getItem("token");
 
 const router = createBrowserRouter(
   [
     {
       path: "/",
-      element: token ? <Navigate to="/dashboard" /> : <App />,
+      element: token ? <Navigate to="/activity" /> : <App />,
     },
     {
       path: "/signin",
@@ -28,9 +33,9 @@ const router = createBrowserRouter(
     {
       path: "/signup/userdata",
       element: (
-        <Protectedroute>
+        
           <Signup />
-        </Protectedroute>
+        
       ),
     },
     {
@@ -42,6 +47,22 @@ const router = createBrowserRouter(
       element: (
         <Protectedroute>
           <Goals />
+        </Protectedroute>
+      ),
+    },
+    {
+      path: "/profile",
+      element: (
+        <Protectedroute>
+          <Profile />
+        </Protectedroute>
+      ),
+    },
+    {
+      path: "/challenges",
+      element: (
+        <Protectedroute>
+          <Challenges />
         </Protectedroute>
       ),
     },
@@ -65,8 +86,22 @@ const router = createBrowserRouter(
       path: "/activity",
       element: (
         <Protectedroute>
+          <SelectExercise />
+        </Protectedroute>
+      ),
+    },
+    {
+      path: "/activity/:exercise",
+      element: (
+        <Protectedroute>
           <Activity />
         </Protectedroute>
+      ),
+    },
+    {
+      path: "/leaderboard",
+      element: (
+        <Leaderboard/>
       ),
     },
     {
@@ -74,6 +109,14 @@ const router = createBrowserRouter(
       element: (
         <Protectedroute>
           <Dashboard />
+        </Protectedroute>
+      ),
+    },
+    {
+      path: "/select",
+      element: (
+        <Protectedroute>
+          <Select />
         </Protectedroute>
       ),
     },

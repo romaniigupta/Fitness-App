@@ -42,7 +42,8 @@ const NutritionTracker = () => {
     try {
       const refreshToken = localStorage.getItem("refreshtoken");
       let response = await fetch(
-        "https://mern-fitness-app-production-e9fe.up.railway.app/refresh-token",
+        // "https://mern-fitness-app-production-e9fe.up.railway.app/refresh-token",
+        "http://localhost:3000/refresh-token",
         {
           method: "POST",
           headers: {
@@ -74,7 +75,8 @@ const NutritionTracker = () => {
       try {
         const token = localStorage.getItem("token");
         const response = await fetch(
-          "https://mern-fitness-app-production-e9fe.up.railway.app/getdata",
+          // "https://mern-fitness-app-production-e9fe.up.railway.app/getdata",
+          "http://localhost:3000/get-data ",
           {
             headers: { Authorization: `Bearer ${token}` },
           }

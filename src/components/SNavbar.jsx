@@ -9,7 +9,7 @@ function SNavbar() {
     <div className="h-screen w-[12vw] bg-[#1f0729] top-0 left-0 md:hidden flex flex-col items-center">
       <i
         className="fa-solid fa-house text-white text-lg my-8 cursor-pointer m-4"
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/activity")}
       ></i>
       <i
         className="fa-solid fa-phone text-white text-lg my-8 cursor-pointer m-4"
