@@ -100,7 +100,8 @@ const NutritionTracker = () => {
       try {
         const token = localStorage.getItem("token");
         const response = await fetch(
-          "https://mern-fitness-app-production-e9fe.up.railway.app/getfood",
+          // "https://mern-fitness-app-production-e9fe.up.railway.app/getfood",
+          "http://localhost:3000/getfood ",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -686,13 +687,13 @@ const NutritionTracker = () => {
           <DNavbar />
           <div className="flex">
             <SDNavbar />
-            <div className="flex justify-center w-full">
-              <div className="w-full max-w-screen overflow-hidden">
+            <div className="flex justify-center w-full h-full">
+              <div className="w-full max-w-screen h-full overflow-hidden">
                 <div className=" flex justify-center text-center bg-purple-700">
                   <div className=" font-semibold text-base">
-                    Welcome <span className="text-yellow-400">{userName}</span>
+                    <p className="text-[18px]">Welcome </p><span className="text-yellow-400">{userName}</span>
                     <p
-                      className="cursor-pointer font-light text-sm hover:text-yellow-400"
+                      className="cursor-pointer font-light text-md hover:text-yellow-400"
                       onClick={() => {
                         navigate("/signup/userdata");
                       }}
@@ -707,7 +708,7 @@ const NutritionTracker = () => {
                   }`}
                 >
                   <div className="relativ rounded shadow-md p-4">
-                    <span className="block text-center font-semibold text-lg">
+                    <span className="block text-center font-semibold text-xl">
                       Eat List
                     </span>
 
@@ -738,18 +739,18 @@ const NutritionTracker = () => {
                     </ul>
                   </div>
                 </div>
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center mb-10">
                   <div
-                    className=" h-1 text-sm bg-purple-950 p-3 mt-6 rounded-full flex justify-center items-center cursor-pointer hover:bg-purple-900"
+                    className=" h-10 text-md bg-purple-950 p-4 mt-6 rounded-full flex justify-center items-center cursor-pointer hover:bg-purple-900"
                     onClick={eatList}
                   >
                     EDIT YOUR EAT LIST
                   </div>
-                  <p className="mt-5 font-semibold text-xl">
+                  <p className="mt-5 font-semibold text-2xl">
                     Your <span className="text-yellow-400">Nutrition</span>{" "}
                     Tracker
                   </p>
-                  <div className="flex mt-5 w- justify-center ">
+                  <div className="flex mt-5 w-full justify-center">
                     <div className="flex w-full justify-center">
                       <div className="flex relative">
                         <div
@@ -834,9 +835,9 @@ const NutritionTracker = () => {
                         <p className="w-[25%] max-md:w-[30%] max-md:text-[11px]">
                           Calories
                         </p>
-                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#6a1888] overflow-hidden">
+                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#4c1361d0] overflow-hidden">
                           <div
-                            className={`h-6 bg-[#22072c] rounded-full transition-all duration-500 ease-in-out`}
+                            className={`h-6 bg-[#8c5792] rounded-full transition-all duration-500 ease-in-out`}
                             style={{ width: `${calPercentage}%` }}
                           ></div>
                         </div>
@@ -848,9 +849,9 @@ const NutritionTracker = () => {
                         <p className="w-[25%] max-md:w-[30%] max-md:text-[11px]">
                           Proteins
                         </p>
-                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#6a1888] overflow-hidden">
+                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#4c1361d0] overflow-hidden">
                           <div
-                            className="h-6 bg-[#22072c] rounded-full transition-all duration-500 ease-in-out"
+                            className="h-6 bg-[#8c5792] rounded-full transition-all duration-500 ease-in-out"
                             style={{ width: `${proPercentage}%` }}
                           ></div>
                         </div>
@@ -862,9 +863,9 @@ const NutritionTracker = () => {
                         <p className="w-[25%] max-md:w-[30%] max-md:text-[11px]">
                           Fats
                         </p>
-                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#6a1888] overflow-hidden">
+                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#4c1361d0] overflow-hidden">
                           <div
-                            className="h-6 bg-[#22072c] rounded-full transition-all duration-500 ease-in-out"
+                            className="h-6 bg-[#8c5792] rounded-full transition-all duration-500 ease-in-out"
                             style={{ width: `${fatsPercentage}%` }}
                           ></div>
                         </div>
@@ -876,9 +877,9 @@ const NutritionTracker = () => {
                         <p className="w-[25%] max-md:w-[30%] max-md:text-[11px]">
                           Carbohydrates
                         </p>
-                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#6a1888] overflow-hidden">
+                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#4c1361d0] overflow-hidden">
                           <div
-                            className="h-6 bg-[#22072c] rounded-full  transition-all duration-500 ease-in-out"
+                            className="h-6 bg-[#8c5792] rounded-full  transition-all duration-500 ease-in-out"
                             style={{ width: `${carbsPercentage}%` }}
                           ></div>
                         </div>
@@ -890,9 +891,9 @@ const NutritionTracker = () => {
                         <p className="w-[25%] max-md:w-[30%] max-md:text-[11px]">
                           Vitamin A
                         </p>
-                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#6a1888] overflow-hidden">
+                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#4c1361d0] overflow-hidden">
                           <div
-                            className="h-6 bg-[#22072c] rounded-full transition-all duration-500 ease-in-out"
+                            className="h-6 bg-[#8c5792] rounded-full transition-all duration-500 ease-in-out"
                             style={{ width: `${vApercentage}%` }}
                           ></div>
                         </div>
@@ -904,9 +905,9 @@ const NutritionTracker = () => {
                         <p className="w-[25%] max-md:w-[30%] max-md:text-[11px]">
                           Vitamin B
                         </p>
-                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#6a1888] overflow-hidden">
+                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#4c1361d0] overflow-hidden">
                           <div
-                            className="h-6 bg-[#22072c] rounded-full transition-all duration-500 ease-in-out"
+                            className="h-6 bg-[#8c5792] rounded-full transition-all duration-500 ease-in-out"
                             style={{ width: `${vBpercentage}%` }}
                           ></div>
                         </div>
@@ -918,9 +919,9 @@ const NutritionTracker = () => {
                         <p className="w-[25%] max-md:w-[30%] max-md:text-[11px]">
                           Vitamin C
                         </p>
-                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#6a1888] overflow-hidden">
+                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#4c1361d0] overflow-hidden">
                           <div
-                            className="h-6 bg-[#22072c] rounded-full transition-all duration-500 ease-in-out"
+                            className="h-6 bg-[#8c5792] rounded-full transition-all duration-500 ease-in-out"
                             style={{ width: `${vCpercentage}%` }}
                           ></div>
                         </div>
@@ -932,9 +933,9 @@ const NutritionTracker = () => {
                         <p className="w-[25%] max-md:w-[30%] max-md:text-[11px]">
                           Vitamin E
                         </p>
-                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#6a1888] overflow-hidden">
+                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#4c1361d0] overflow-hidden">
                           <div
-                            className="h-6 bg-[#22072c] rounded-full transition-all duration-500 ease-in-out"
+                            className="h-6 bg-[#8c5792] rounded-full transition-all duration-500 ease-in-out"
                             style={{ width: `${vEpercentage}%` }}
                           ></div>
                         </div>
@@ -946,9 +947,9 @@ const NutritionTracker = () => {
                         <p className="w-[25%] max-md:w-[30%] max-md:text-[11px]">
                           Vitamin K
                         </p>
-                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#6a1888] overflow-hidden">
+                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#4c1361d0] overflow-hidden">
                           <div
-                            className="h-6 bg-[#22072c] rounded-full transition-all duration-500 ease-in-out"
+                            className="h-6 bg-[#8c5792] rounded-full transition-all duration-500 ease-in-out"
                             style={{ width: `${vKpercentage}%` }}
                           ></div>
                         </div>
@@ -960,9 +961,9 @@ const NutritionTracker = () => {
                         <p className="w-[25%] max-md:w-[30%] max-md:text-[11px]">
                           Iron
                         </p>
-                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#6a1888] overflow-hidden">
+                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#4c1361d0] overflow-hidden">
                           <div
-                            className=" h-6 bg-[#22072c] rounded-full transition-all duration-500 ease-in-out"
+                            className=" h-6 bg-[#8c5792] rounded-full transition-all duration-500 ease-in-out"
                             style={{ width: `${ironPercentage}%` }}
                           ></div>
                         </div>
@@ -974,9 +975,9 @@ const NutritionTracker = () => {
                         <p className="w-[25%] max-md:w-[30%] max-md:text-[11px]">
                           Calcium
                         </p>
-                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#6a1888] overflow-hidden">
+                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#4c1361d0] overflow-hidden">
                           <div
-                            className="h-6 bg-[#22072c] rounded-full transition-all duration-500 ease-in-out"
+                            className="h-6 bg-[#8c5792] rounded-full transition-all duration-500 ease-in-out"
                             style={{ width: `${calciumPercentage}%` }}
                           ></div>
                         </div>
@@ -988,9 +989,9 @@ const NutritionTracker = () => {
                         <p className="w-[25%] max-md:w-[30%] max-md:text-[11px]">
                           Magnesium
                         </p>
-                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#6a1888] overflow-hidden">
+                        <div className="w-[70%] max-md:w-[50%] h-6 rounded-full bg-[#4c1361d0] overflow-hidden">
                           <div
-                            className="h-6 bg-[#22072c] rounded-full transition-all duration-500 ease-in-out"
+                            className="h-6 bg-[#8c5792] rounded-full transition-all duration-500 ease-in-out"
                             style={{ width: `${magnesiumPercentage}%` }}
                           ></div>
                         </div>

@@ -32,7 +32,7 @@ function App() {
               onClick={() => {
                 navigate("/signin");
               }}
-              className="w-20 h-5  bg-yellow-400 mt-4 text-center rounded-full font-dm-sans font-bold text-[12px] flex items-center justify-center hover:cursor-pointer transition-all hover:bg-white max-md:h-3 max-md:text-[8px]"
+              className="w-25 h-10 p-4 bg-yellow-400 mt-4 text-center rounded-full font-dm-sans font-bold text-[20px] flex items-center justify-center hover:cursor-pointer transition-all hover:bg-white max-md:h-3 max-md:text-[8px]"
             >
               Sign In
             </button>

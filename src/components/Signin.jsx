@@ -80,7 +80,7 @@ function Signin() {
                   <input
                     type="email"
                     placeholder="Email"
-                    className={`w-80 max-md:text-[9px] h-6 max-md:w-44 max-md:h-5 outline-none rounded-md text-center border-[2px] m-5 max-lg:w-60 max-lg:text-[10px] ${
+                    className={`w-80 max-md:text-[9px] h-10 text-[20px] max-md:w-44 max-md:h-5 outline-none rounded-md text-center border-[2px] m-5 max-lg:w-60 max-lg:text-[10px] ${
                       errors.email ? "border-red-600" : "border-transparent"
                     }`}
                     {...register("email", {
@@ -100,7 +100,7 @@ function Signin() {
                   <input
                     type="password"
                     placeholder="Password"
-                    className={`w-80 h-6 outline-none max-md:text-[8px] max-md:w-44 max-md:h-5 rounded-md text-center border-[2px] m-5 max-lg:w-60 max-lg:text-[10px] ${
+                    className={`w-80 h-10 text-[20px] outline-none max-md:text-[8px] max-md:w-44 max-md:h-5 rounded-md text-center border-[2px] m-5 max-lg:w-60 max-lg:text-[10px] ${
                       errors.password ? "border-red-600" : "border-transparent"
                     }`}
                     {...register("password", {
@@ -118,12 +118,14 @@ function Signin() {
                 </div>
                 <button
                   type="submit"
-                  className="flex justify-center max-lg:text-[11px] max-lg:w-13 max-lg:h-4 items-center bg-yellow-400 max-md:w-14 max-md:h-3 text-xs max-md:text-[7px] w-28 font-semibold h-5 rounded-2xl m-5 max-md:m-1  hover:bg-white hover:text-black"
+                  className="flex justify-center items-center text-[16px] md:text-[20px] w-24 md:w-28 h-8 md:h-10 
+                          bg-yellow-400 text-black font-semibold rounded-2xl m-2 md:m-5 
+                          hover:bg-white hover:text-black transition-all duration-200"
                 >
                   Login
                 </button>
                 <Link to={"/signup"}>
-                  <button className="text-white text-xs hover:underline max-md:text-[8px] max-lg:text-[10px]">
+                  <button className="text-white text-lg hover:underline max-md:text-[8px] max-lg:text-[10px]">
                     Create a new Account
                   </button>
                 </Link>

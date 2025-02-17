@@ -63,13 +63,13 @@ function Goals() {
       <div className="flex w-screen">
         <SDNavbar></SDNavbar>
         <div className="flex w-screen flex-col items-center">
-          <div className="text-2xl text-center mt-[5vh] text-yellow-400 font-dm-sans">
+          <div className="text-3xl text-center mt-[5vh] text-yellow-400 font-dm-sans">
             Select your goal
           </div>
           <div className="w-[50vw] h-96 bg-[#1f0729] mt-8 rounded-3xl max-md:w-[80vw]">
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="w-full h-full flex  flex-col  justify-evenly items-center "
+              className="w-full h-full flex flex-col justify-evenly items-center "
             >
               <label htmlFor="musclegain" className="relative">
                 <input
@@ -80,7 +80,7 @@ function Goals() {
                   className="appearance-none w-56 h-20 rounded-md bg-[#09020c] cursor-pointer checked:bg-purple-950"
                   {...register("goal", { required: true })}
                 />
-                <span className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 text-white cursor-pointer">
+                <span className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 text-white text-[20px] cursor-pointer">
                   Muscle gain
                 </span>
               </label>
@@ -93,18 +93,18 @@ function Goals() {
                   className="appearance-none w-56 h-20 rounded-md bg-[#09020c] cursor-pointer checked:bg-purple-950"
                   {...register("goal", { required: true })}
                 />
-                <span className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 text-white cursor-pointer">
-                  Fatloss
+                <span className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 text-white text-[20px] cursor-pointer">
+                  Fat Loss
                 </span>
                 {errors.goal && (
-                  <div className="absolute w-full top-50% left-[50%] text-red-600 text-xs text-center -translate-x-1/2">
+                  <div className="absolute w-full top-50% left-[50%] text-red-600 text-md text-center -translate-x-1/2">
                     Please select a goal
                   </div>
                 )}
               </label>
               <button
                 type="submit"
-                className="bg-yellow-400 w-28 font-[600px] h-6 rounded-2xl m-2 hover:bg-white max-md:text-[10px] max-md:h-4 max-md:w-24"
+                className="bg-yellow-400 w-28 font-[600px] h-10 text-[20px] text-bold rounded-2xl m-2 hover:bg-white max-md:text-[18px] max-md:h-6 max-md:w-24"
               >
                 Next
               </button>

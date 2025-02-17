@@ -17,7 +17,7 @@ function SNavbar() {
           setvisible2(true);
           setTimeout(() => {
             document.querySelector("#text").innerHTML =
-              "<p>Email: <span class='font-normal'>izhan3008@gmail.com</span></p><p>Contact No: <span class='font-normal'>+923486186394</span></p>";
+              "<p>Email: <span class='font-normal'><br>romani2181.be22@chitkara.edu.in<br>ananya1258.be22@chitkara.edu.in<br>aditya67.be22@chitkara.edu.in<br>ruhani2194.be22@chitkara.edu.in</span></p>";
           }, 0);
         }}
       ></i>
@@ -28,7 +28,7 @@ function SNavbar() {
           setvisible2(true);
           setTimeout(() => {
             document.querySelector("#text").innerHTML =
-              "<p class='font-normal text-base text-center'>I am a full stack web-developer with expertise in creating userfriendly web app for multiple audiences</p>";
+              "<p class='font-normal text-base text-center'>We are a team of full-stack developers building user-friendly and scalable web applications. This project showcases our collaboration, technical skills, and commitment to delivering high-quality solutions.</p>";
           }, 0);
         }}
       ></i>
@@ -46,10 +46,11 @@ function SNavbar() {
 
       {visible2 && (
         <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-10 flex justify-center items-center">
-          <div className="w-96 h-96 bg-white rounded-md text-[#1f0729] flex justify-center items-center  font-bold relative p-4">
-            <div id="text"></div>
+          <div className="w-auto max-w-md bg-white rounded-lg text-[#1f0729] font-bold relative p-6 shadow-lg border border-gray-300">
+            <div id="text" className="text-center text-lg"></div>
+            
             <div
-              className="bg-red-600 absolute bottom-1 px-4 text-white rounded-full cursor-pointer hover:bg-red-500"
+              className="bg-red-600 mt-6 px-6 py-2 flex items-center justify-center text-[17px] text-white rounded-full cursor-pointer hover:bg-red-500 mx-auto w-24"
               onClick={() => {
                 setvisible2(false);
               }}

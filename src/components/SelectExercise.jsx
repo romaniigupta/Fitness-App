@@ -41,7 +41,7 @@ const SelectExercise = () => {
 
           {/* ✅ Start Button */}
           <button
-            className="w-60 h-12 md:w-64 md:h-12 lg:w-56 lg:h-12 bg-blue-500 text-white rounded-full font-bold 
+            className="w-60 h-12 md:w-64 md:h-12 lg:w-56 lg:h-12 bg-blue-500 text-white text-[18px] rounded-full font-bold 
               hover:bg-yellow-500 hover:text-[#30093f] cursor-pointer mt-6"
             onClick={startExercise}
           >
