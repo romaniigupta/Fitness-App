@@ -421,9 +421,10 @@ function App() {
             </p>
             <button
               onClick={() => {
-                navigate("/signup");
+                navigate("/signin");
               }}
               className="mt-6 px-8 py-4 bg-[#9b4dca] text-white rounded-full font-semibold text-lg transition-all hover:bg-[#FFFFFF] animate__animated animate__fadeIn animate__delay-2s"
+              // className="w-25 h-10 p-4 bg-yellow-400 mt-4 text-center rounded-full font-dm-sans font-bold text-[20px] flex items-center justify-center hover:cursor-pointer transition-all hover:bg-white max-md:h-3 max-md:text-[8px]"
             >
               Join Now
             </button>

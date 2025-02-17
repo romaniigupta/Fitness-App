@@ -43,11 +43,11 @@ function Fatloss() {
   };
 
   return (
-    <div>
+    <>
       <DNavbar />
-      <div className="flex w-screen">
+      <div className="flex w-full">
         <SDNavbar />
-        <div className="h-screen w-screen bg-[#30093f] p-0 m-0 flex flex-col items-center font-dm-sans">
+        <div className="h-screen w-full bg-[#30093f] p-0 m-0 flex flex-col items-center font-dm-sans">
           <div className="mt-[50vh] -translate-y-1/2 flex flex-col items-center justify-center">
             <div
               className="w-80 h-20 max-md:w-56 max-md:text-[16px]  bg-white rounded-full flex justify-center items-center text-2xl hover:bg-yellow-400 hover:text-[#30093f]  cursor-pointer m-10 max-md:m-5 font-bold"
@@ -71,7 +71,7 @@ function Fatloss() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

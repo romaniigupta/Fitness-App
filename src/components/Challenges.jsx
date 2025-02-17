@@ -37,7 +37,7 @@ const Challenges = () => {
   };
 
   return (
-    <div className="w-screen h-screen flex flex-col bg-[#30093f] text-white font-dm-sans">
+    <div className="w-full h-screen flex flex-col bg-[#30093f] text-white font-dm-sans">
       <DNavbar />
       <div className="flex flex-1 w-full">
         <SDNavbar />
@@ -62,11 +62,11 @@ const Challenges = () => {
             </div>
           ) : (
             // ✅ Show available challenges if no active one
-            <div className="w-3/4 max-w-4xl bg-[#1f0729] rounded-lg p-5 mt-5 overflow-x-auto">
+            <div className="w-96 mx-auto bg-[#1f0729] rounded-lg p-5 mt-5 overflow-x-auto">
               {challenges.map((challenge) => (
                 <div
                   key={challenge.id}
-                  className={`w-full md:w-3/4 lg:w-1/2 p-4 mb-3 rounded-lg 
+                  className={`w-80 mx-auto p-4 mb-3 rounded-lg 
                     text-lg font-bold cursor-pointer text-center transition-all
                     ${
                       activeChallenge?.id === challenge.id

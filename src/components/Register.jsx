@@ -48,10 +48,10 @@ function Register() {
       <div className="flex max-md:w-screen">
         <SNavbar></SNavbar>
         <div className="w-screen flex flex-col items-center">
-          <div className="text-2xl text-center mt-[5vh] text-yellow-400 font-dm-sans">
-            Register yourself
+          <div className="text-3xl text-center mt-[5vh] text-yellow-400 font-dm-sans">
+            Register Yourself
           </div>
-          <div className="w-[50vw] h-96 bg-[#1f0729] mt-8 rounded-3xl max-md:w-[80vw]">
+          <div className="w-[50vw] h-full bg-[#1f0729] mt-8 rounded-3xl max-md:w-[80vw]">
             <form
               onSubmit={handleSubmit(onSubmit)}
               className="flex flex-col items-center justify-center text-sm h-[100%]"
@@ -60,7 +60,7 @@ function Register() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className={`w-80 max-md:text-[9px] h-6 max-md:w-44 max-md:h-5 outline-none rounded-md text-center border-[2px] m-5 max-lg:w-60 max-lg:text-[10px] ${
+                  className={`w-80 max-md:text-[9px] h-10 text-[20px] max-md:w-44 max-md:h-5 outline-none rounded-md text-center border-[2px] m-5 max-lg:w-60 max-lg:text-[10px] ${
                     errors.email ? "border-red-600" : "border-transparent"
                   }`}
                   {...register("email", {
@@ -80,7 +80,7 @@ function Register() {
                 <input
                   type="password"
                   placeholder="Enter your password"
-                  className={`w-80 max-md:text-[9px] h-6 max-md:w-44 max-md:h-5 outline-none rounded-md text-center border-[2px] m-5 max-lg:w-60 max-lg:text-[10px] ${
+                  className={`w-80 max-md:text-[9px] h-10 text-[20px] max-md:w-44 max-md:h-5 outline-none rounded-md text-center border-[2px] m-5 max-lg:w-60 max-lg:text-[10px] ${
                     errors.password ? "border-red-600" : "border-transparent"
                   }`}
                   {...register("password", {
@@ -104,7 +104,7 @@ function Register() {
                 <input
                   type="password"
                   placeholder="Re-enter your password"
-                  className={`w-80 max-md:text-[9px] h-6 max-md:w-44 max-md:h-5 outline-none rounded-md text-center border-[2px] m-5 max-lg:w-60 max-lg:text-[10px]${
+                  className={`w-80 max-md:text-[9px] h-10 text-[20px] max-md:w-44 max-md:h-5 outline-none rounded-md text-center border-[2px] m-5 max-lg:w-60 max-lg:text-[10px]${
                     errors.repassword ? "border-red-600" : "border-transparent"
                   }`}
                   {...register("repassword", {
@@ -124,7 +124,9 @@ function Register() {
               </div>
               <button
                 type="submit"
-                className="flex justify-center max-lg:text-[11px] max-lg:w-13 max-lg:h-4 items-center bg-yellow-400 max-md:w-14 max-md:h-3 text-xs max-md:text-[7px] w-28 font-semibold h-5 rounded-2xl m-5 max-md:m-1  hover:bg-white hover:text-black"
+                className="flex justify-center items-center text-[16px] md:text-[20px] w-24 md:w-28 h-8 md:h-10 
+                          bg-yellow-400 text-black font-semibold rounded-2xl m-2 md:m-5 
+                          hover:bg-white hover:text-black transition-all duration-200"
               >
                 Next
               </button>

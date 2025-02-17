@@ -26,6 +26,11 @@ function SDNavbar() {
           navigate('/leaderboard')}}
       ></i>
       <i
+        className="fa-solid fa-bullseye text-white text-lg my-8 cursor-pointer m-4 "
+        onClick={() => {
+          navigate('/goals')}}
+      ></i>
+      <i
         className="fa-solid fa-power-off text-white text-lg my-8 cursor-pointer m-4"
         onClick={show}
       ></i>

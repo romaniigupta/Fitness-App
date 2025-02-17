@@ -25,7 +25,7 @@ app.use(
 
 mongoose
   .connect(
-    'mongodb+srv://anshika:anshi0903@mern-blog.9mdyusk.mongodb.net/mern-blog?retryWrites=true&w=majority&appName=mern-blog'
+    'mongodb+srv://Ananya:ananya123@cluster0.cccoiol.mongodb.net/Fitness-app?retryWrites=true&w=majority&appName=Cluster0'
   )
   .then(() => {
     console.log("Connected to Database");
