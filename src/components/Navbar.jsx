@@ -5,9 +5,9 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [visible2, setvisible2] = useState(false);
   return (
-    <nav className="w-screen h-16 bg-[#1f0729] flex items-center max-md:hidden">
+    <nav className="w-full h-16 bg-[#1f0729] flex items-center max-md:hidden">
       {visible2 && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-10 flex justify-center items-center">
+        <div className="fixed inset-0 z-30 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center">
           <div className="w-auto max-w-md bg-white rounded-lg text-[#1f0729] font-bold relative p-6 shadow-lg border border-gray-300">
             <div id="text" className="text-center text-lg"></div>
             
